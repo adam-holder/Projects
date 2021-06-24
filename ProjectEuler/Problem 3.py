@@ -21,9 +21,9 @@ def primetest(n: int) -> bool:
 PrimeFactors = []
 BigNum = 600851475143
 for i in range(2,int(BigNum/2)):
-    if primetest(i) == False:
+    if (i % 2 == 0) or (i % 3 == 0):
         continue
-    if BigNum % i == 0:
+    if BigNum % i == 0 and primetest(i) == True:
         print(i)
         PrimeFactors.append(i)
 print (PrimeFactors)
