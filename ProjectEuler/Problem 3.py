@@ -20,10 +20,11 @@ def primetest(n: int) -> bool:
 
 PrimeFactors = []
 BigNum = 600851475143
+j = 1
 for i in range(2,int(BigNum/2)):
-    if (i % 2 == 0) and (i != 2):
+    if primetest(i):
         continue
-    if BigNum % i == 0 and primetest(i) == True:
+    if BigNum % i == 0:
         print(i)
         PrimeFactors.append(i)
 print (PrimeFactors)
