@@ -19,14 +19,16 @@ def primetest(n: int) -> bool:
         i += 6
     return True
 
+#Initialize the PrimeFactors List and the listed Big Number as BigNum
 PrimeFactors = []
 BigNum = 600851475143
+
+#loop to see if i divides evenly into BigNum. If it does and it is prime, adds i to the PrimeFactors list. If the product of PrimeFactors equals BigNum it stops the loop, prints the factors and announces the biggest factor.
 for i in range(2,int(BigNum/2)):
-    if (i % 2 == 0) or (i % 3 == 0):
-        continue
     if BigNum % i == 0 and primetest(i) == True:
         print(i)
         PrimeFactors.append(i)
     if math.prod(PrimeFactors) == BigNum:
         break
 print (PrimeFactors)
+print (str(max(PrimeFactors)) + " is the largest prime factor.")
