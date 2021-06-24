@@ -22,7 +22,7 @@ PrimeFactors = []
 BigNum = 600851475143
 j = 1
 for i in range(2,int(BigNum/2)):
-    if primetest(i):
+    if primetest(i) == True:
         continue
     if BigNum % i == 0:
         print(i)
