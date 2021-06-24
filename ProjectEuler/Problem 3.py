@@ -20,7 +20,6 @@ def primetest(n: int) -> bool:
 
 PrimeFactors = []
 BigNum = 600851475143
-j = 1
 for i in range(2,int(BigNum/2)):
     if primetest(i) == True:
         continue
