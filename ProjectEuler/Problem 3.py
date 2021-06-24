@@ -6,6 +6,7 @@
 
 #This prime tester is based off of Wilson's Theorem. Every prime has the form 6k+1 or 6k-1.
 #This tests an integer n where if it is divisble by 2 or 3 it returns false, if it is 2 or 3 it returns true, and if n is of the from 6k+1 or 6k-1 it checks to see if any i value divides evenly if so, it returns False. Otherwise, it is prime.
+import math
 def primetest(n: int) -> bool:
     if n <=3:
         return n>1
@@ -26,4 +27,6 @@ for i in range(2,int(BigNum/2)):
     if BigNum % i == 0 and primetest(i) == True:
         print(i)
         PrimeFactors.append(i)
+    if math.prod(PrimeFactors) == BigNum:
+        break
 print (PrimeFactors)
