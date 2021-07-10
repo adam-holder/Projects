@@ -13,12 +13,13 @@ def snippet(start,stop,arr: list):
     for i in range(start,stop):
         arraySnippet.append(int(arr[i]))
     return arraySnippet
-    
+
 #sets the length of the snippet
 jStart = int(input("Define snippet length: "))
 
 #initializes biggestNum to 0, i to 0 and j to the max length inputted in jStart
 biggestNum = 0
+biggestNumArray = []
 i = 0
 j = jStart
 
@@ -26,12 +27,12 @@ j = jStart
 while j < len(numlist):
     if math.prod(snippet(i,j,numlist)) > biggestNum:
         biggestNum = math.prod(snippet(i,j,numlist))
+        biggestNumArray = snippet(i,j,numlist)
     i += 1
     j += 1
 
 
 print (biggestNum)
+print (biggestNumArray)
 
-#When the snippet length is 13, the answer is 23514624000
-
-
+#When the snippet length is 13, the answer is 23514624000 mulitplying the elements of the list [5, 5, 7, 6, 6, 8, 9, 6, 6, 4, 8, 9, 5]
