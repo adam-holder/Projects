@@ -29,4 +29,4 @@ sizeofarray = int(input("Input Size of Array: "))
 A = GenerateArray(sizeofarray)
 
 Primes = SieveArray(A)
-print ("The 10001st prime is: " + str(max(Primes))
+print ("The 10001st prime is: " + str(max(Primes)))
