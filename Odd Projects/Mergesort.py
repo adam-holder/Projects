@@ -1,4 +1,5 @@
 import random
+from matplotlib import pyplot as plt
 
 def mergesort (arr):
     #If an array "arr" has more than 1 item, find a midpoint in that array.
@@ -48,12 +49,24 @@ def generateArray(length):
         genA.append(random.randint(1,1000))
     return genA
 
+def generateBaseArray(length):
+    genBA = []
+    for i in range(length):
+        genBA.append(i)
+    return genBA
+
 #main code:
 #generate an array based on user input, print the unsorted array, use mergesort, print sorted array.
 if __name__ == '__main__':
-    A = generateArray(int(input("Input size of generated array: ")))
+    arraylength = int(input("Input size of generated array: "))
+    y = generateArray(arraylength)
+    x = generateBaseArray(arraylength)
     print("Array provided:", end="\n")
-    printArray(A)
-    mergesort(A)
+    printArray(y)
+    plt.bar(x,y)
+    plt.show()
+    z = mergesort(y)
     print("Sorted array: ", end="\n")
-    printArray(A)
+    printArray(y)
+    plt.bar(x,y)
+    plt.show()
