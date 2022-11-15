@@ -29,4 +29,7 @@ sizeofarray = int(input("Input Size of Array: "))
 A = GenerateArray(sizeofarray)
 
 Primes = SieveArray(A)
-print ("The 10001st prime is: " + str(max(Primes)))
+if len(Primes)<10001:
+    print (f'The largest prime in the {sizeofarray} length array is {str(max(Primes))}.\n This is prime number {len(Primes)} ')
+else:
+    print ("The 10001st prime is: " + str(max(Primes)))
