@@ -27,6 +27,10 @@ def SieveArray (list: list):
 
 sizeofarray = int(input("Input Size of Array: "))
 A = GenerateArray(sizeofarray)
-
 Primes = SieveArray(A)
+while len(Primes) < 10001:
+    print(f'SieveArray is too small. Unable to locate 10001st Prime.\nPlease enter a new array with size greater than {sizeofarray}')
+    sizeofarray = int(input("Input new size of array: "))
+    A = GenerateArray(sizeofarray)
+    Primes = SieveArray(A)
 print ("The 10001st prime is: " + str(max(Primes)))
