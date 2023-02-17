@@ -24,14 +24,15 @@ def triangleNumbers(factorCheck):
         factors = factorNum(triangleTotal)
         factorLen = len(factors)
         triangleNum+=1
-        if factorLen > loadingCheck:
-            print(f'{triangleTotal}: {factors}\nOver {loadingCheck} factors')
-            loadingCheck += 50
+        if factorLen >= factorCheck:
+            print(f'{triangleTotal}: {factors}')
 
 
 def factorNum(n):
     factors = []
-    for num in range(n,0,-1):
+    if len(factors) == 0:
+        factors.append(n)
+    for num in range(int(n/2),0,-1):
         if n % num == 0:
             factors.append(num)
     return factors
