@@ -18,12 +18,15 @@ def triangleNumbers(factorCheck):
     triangleNum = 1
     triangleTotal = 0
     factorLen = 0
+    loadingCheck = 50
     while (factorLen<factorCheck):
         triangleTotal = triangleNum+triangleTotal
         factors = factorNum(triangleTotal)
         factorLen = len(factors)
         triangleNum+=1
-    print(f'{triangleTotal}: {factors}' )
+        if factorLen > loadingCheck:
+            print(f'{triangleTotal}: {factors}\nOver {loadingCheck} factors')
+            loadingCheck += 50
 
 
 def factorNum(n):
