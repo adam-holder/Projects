@@ -21,4 +21,20 @@ def collatz(num):
         else:
             num = int(3*num+1)
         collatzChain.append(num)
-    print(f'{collatzChain} has length {len(collatzChain)}')
+    # print(f'{collatzChain} has length {len(collatzChain)}')
+    return collatzChain
+
+maxChainLength = 0
+maxChain = []
+maxChainStarter = 0
+
+for i in range(1,1000000):
+    testChain = collatz(i)
+    chainLength = len(testChain)
+    if chainLength > maxChainLength:
+        maxChainLength = chainLength
+        # print(maxChainLength)
+        maxChain = testChain
+        maxChainStarter = i
+print(f'{maxChainStarter}: With length {maxChainLength}, {maxChain}')
+
