@@ -66,7 +66,7 @@ def binaryBuilder(maxNum,minNum,gridSize):
 ##    else:
 ##        biArr.append(strNum)
 ##        return binaryBuilder(currentNum,minNum,biArr)
-    
+
 
 def pointFinder(size):
     startTime = time.time()
@@ -77,4 +77,3 @@ def pointFinder(size):
     print (f'{len (validPaths)} paths')
     elapsedTime = time.time() - startTime
     print('Elapsed Time: ', elapsedTime)
-    
