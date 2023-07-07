@@ -29,7 +29,7 @@ sizeofarray = int(input("Input Size of Array: "))
 A = GenerateArray(sizeofarray)
 Primes = SieveArray(A)
 while len(Primes) < 10001:
-    print(f'SieveArray is too smalland we only found {len(Primes)} Prime Numbers.\nPlease enter a new array with size greater than {sizeofarray}')
+    print(f'SieveArray is too small and we only found {len(Primes)} Prime Numbers.\nPlease enter a new array with size greater than {sizeofarray}')
     sizeofarray = int(input("Input new size of array: "))
     A = GenerateArray(sizeofarray)
     Primes = SieveArray(A)
